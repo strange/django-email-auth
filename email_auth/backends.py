@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.backends import ModelBackend as _ModelBackend
 
 class CouldNotAuthenticateError(Exception):
-    """Multiple accounts with the same email and the same password exit."""
+    """Multiple accounts with the same email and the same password exist."""
     pass
 
 
