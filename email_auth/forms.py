@@ -8,7 +8,7 @@ class AuthenticationForm(Form):
     def __init__(self, *args, **kwargs):
         super(AuthenticationForm, self).__init__(*args, **kwargs)
         del(self.fields['username'])
-        self.fields.insert(0, 'email', forms.EmailField(label=_(u"Email")))
+        self.fields.insert(0, 'email', forms.CharField(label=_(u"Email")))
 
     def clean(self):
         email = self.cleaned_data.get('email')
